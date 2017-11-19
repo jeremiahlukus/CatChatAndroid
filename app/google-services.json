@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "949866402009",
+    "firebase_url": "https://catchat-c3f14.firebaseio.com",
+    "project_id": "catchat-c3f14",
+    "storage_bucket": "catchat-c3f14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949866402009:android:86fd859424c2c809",
+        "android_client_info": {
+          "package_name": "com.jparrack.catchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949866402009-6bgs6l9jdvj8crb4kkdojui2mvtl2e75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jparrack.catchat",
+            "certificate_hash": "998ed1facd055b84cb9998cf6b5ae8097f09c0d6"
+          }
+        },
+        {
+          "client_id": "949866402009-5gas9hf2lhlkalb2rg65iu17v6b5tai4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmrsWU2TxPP-yzgYRe0vBrELrcCyW1dcI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949866402009-5gas9hf2lhlkalb2rg65iu17v6b5tai4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
