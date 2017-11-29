@@ -10,19 +10,24 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.jparrack.catchat.adapter.MainViewAdapter;
 import com.jparrack.catchat.fragment.Camera2BasicFragment;
 import com.jparrack.catchat.fragment.ConversationFragment;
 import com.jparrack.catchat.models.IStory;
+import com.jparrack.catchat.util.FirebaseListenDownloadImage;
+import com.jparrack.catchat.util.FirebaseListenMessage;
+import com.jparrack.catchat.util.FirebaseSendMessage;
 import com.jparrack.catchat.util.Print;
 import com.jparrack.catchat.view.SnapTabsView;
 import com.jparrack.catchat.view.StoryViewer;
 
 import java.util.List;
 
-public class MainActivity extends FullScreenActivity {
+public class MainActivity extends FullScreenActivity implements FirebaseListenDownloadImage.OnListenImage,
+        FirebaseListenMessage.OnListenMessage{
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -121,6 +126,14 @@ public class MainActivity extends FullScreenActivity {
             }
         });
 
+        //listen event download Image from firebase
+        new FirebaseListenDownloadImage(this);
+
+        //listen event message
+        new FirebaseListenMessage(this);
+
+        //Test send a message
+        FirebaseSendMessage.sendMessage("","Message Testing");
     }
 
     public void showStory(final IStory story, final Point point, final StoryViewer.StoryViewListener listener) {
@@ -200,4 +213,25 @@ public class MainActivity extends FullScreenActivity {
         });
     }
 
+    @Override
+    public void listenImage(final String url) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(getApplicationContext(),"Another upload image with url: " + url,
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    @Override
+    public void listenMessage(final String message) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(getApplicationContext(),"Receive new Message: " + message,
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 }

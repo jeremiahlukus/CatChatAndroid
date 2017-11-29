@@ -46,6 +46,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.jparrack.catchat.R;
+import com.jparrack.catchat.util.FirebaseUploader;
 import com.jparrack.catchat.view.AutoFitTextureView;
 
 import java.io.File;
@@ -895,6 +896,11 @@ public class Camera2BasicFragment extends Fragment implements FragmentCompat.OnR
                     showToast("Saved: " + mFile);
                     Log.d(TAG, mFile.toString());
                     unlockFocus();
+
+                    //upload image
+                    FirebaseUploader firebaseUploader = new FirebaseUploader();
+                    firebaseUploader.uploadFile(mFile,mFile.getName());
+
                 }
             };
 

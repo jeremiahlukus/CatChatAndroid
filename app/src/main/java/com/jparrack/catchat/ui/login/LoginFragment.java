@@ -37,6 +37,8 @@ public class LoginFragment extends Fragment {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
+    public static String EMAIL = "";
+
     @BindView(R.id.input_email)
     EditText _emailText;
     @BindView(R.id.input_password)
@@ -124,7 +126,7 @@ public class LoginFragment extends Fragment {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _emailText.getText().toString();
+        final String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
         fireBaseAuthService.login(email, password)
@@ -133,6 +135,7 @@ public class LoginFragment extends Fragment {
                 .subscribe(new DefaultObserver<LoginResponse>() {
                     @Override
                     public void onNext(LoginResponse loginResponse) {
+                        EMAIL = email;
                         Log.e(TAG, "onNext: " + loginResponse.getMessage());
                         startActivity(new Intent(getContext(), MainActivity.class));
                         getActivity().finish();

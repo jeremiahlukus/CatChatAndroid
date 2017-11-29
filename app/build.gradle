@@ -20,9 +20,9 @@ android {
 }
 
 ext {
-    supportVersion = '25.2.0'
+    supportVersion = '26.+'
     retroVersion = '2.1.0'
-    firebaseVersion = '10.0.1'
+    firebaseVersion = '11.4.2'
 }
 
 
