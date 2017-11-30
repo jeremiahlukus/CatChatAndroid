@@ -8,6 +8,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jparrack.catchat.ui.login.LoginFragment.EMAIL;
 
 /**
@@ -18,8 +21,10 @@ public class FirebaseListenMessage {
     private static String TAG = FirebaseListenMessage.class.getName();
     private static FirebaseListenMessage firebaseListenMessage;
     private static OnListenMessage onListenMessage;
+    private static List<ObjectMessage> listMessage;
     public FirebaseListenMessage(OnListenMessage OnListenMessage){
         if(firebaseListenMessage == null){
+            listMessage = new ArrayList<>();
             onListenMessage = OnListenMessage;
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("message");
 
@@ -29,6 +34,9 @@ public class FirebaseListenMessage {
                     Log.d(TAG, "onChildAdded:" + dataSnapshot.getKey());
                     Log.d(TAG,"Send message: " + dataSnapshot.getValue());
                     ObjectMessage objectMessage = dataSnapshot.getValue(ObjectMessage.class);
+
+                    //add listMessage
+                    listMessage.add(objectMessage);
 
                     //check email send message different email send
                     if(objectMessage.getEmailSend().equals(EMAIL)) {

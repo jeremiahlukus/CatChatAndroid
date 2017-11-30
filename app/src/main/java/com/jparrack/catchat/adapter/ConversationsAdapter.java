@@ -6,6 +6,7 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import java.util.List;
  */
 
 public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdapter.ConversationViewHolder> implements OnClickAtIndex<Point> {
-
+    private static final String TAG = ConversationsAdapter.class.getName();
     private List<Chat> mItems = new ArrayList<>();
     private OnConversationClickedListener mListener;
 
@@ -43,6 +44,7 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
 
     @Override
     public void onBindViewHolder(ConversationViewHolder holder, int position) {
+        Log.d(TAG, "onBindViewHolder: " + position);
         holder.load(mItems.get(position));
     }
 
