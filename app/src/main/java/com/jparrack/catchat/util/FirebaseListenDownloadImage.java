@@ -34,7 +34,7 @@ public class FirebaseListenDownloadImage {
                     ObjectImage objectImage = dataSnapshot.getValue(ObjectImage.class);
                     Log.d(TAG, "onChildAdded: url: " + objectImage.getUrl());
                     if(!objectImage.getEmail().equals(EMAIL)) {
-                        onListenImage.listenImage(objectImage.getUrl());
+                        onListenImage.listenImage(objectImage.getEmail(), objectImage.getUrl());
                     }
 
                 }
@@ -65,6 +65,6 @@ public class FirebaseListenDownloadImage {
     }
 
     public interface OnListenImage{
-        public void listenImage(String url);
+        public void listenImage(String email, String url);
     }
 }

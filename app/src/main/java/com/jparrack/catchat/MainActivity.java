@@ -214,22 +214,22 @@ public class MainActivity extends FullScreenActivity implements FirebaseListenDo
     }
 
     @Override
-    public void listenImage(final String url) {
+    public void listenImage(final String email, final String url) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(getApplicationContext(),"Another upload image with url: " + url,
+                Toast.makeText(getApplicationContext(),email + " uploaded image: " + url,
                         Toast.LENGTH_LONG).show();
             }
         });
     }
 
     @Override
-    public void listenMessage(final String message) {
+    public void listenMessage(final String emailSend, final String message) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(getApplicationContext(),"Receive new Message: " + message,
+                Toast.makeText(getApplicationContext(),"Receive new Message from " + emailSend + ": "+ message,
                         Toast.LENGTH_LONG).show();
             }
         });

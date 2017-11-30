@@ -38,7 +38,7 @@ public class FirebaseListenMessage {
                     //check email receive
 
                     //display message
-                    onListenMessage.listenMessage(objectMessage.getMessage());
+                    onListenMessage.listenMessage(objectMessage.getEmailSend(), objectMessage.getMessage());
                 }
 
                 @Override
@@ -67,6 +67,6 @@ public class FirebaseListenMessage {
     }
 
     public interface OnListenMessage{
-        public void listenMessage(String message);
+        public void listenMessage(String emailSend, String message);
     }
 }

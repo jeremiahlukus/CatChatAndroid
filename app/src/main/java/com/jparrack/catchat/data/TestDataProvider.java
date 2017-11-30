@@ -1,5 +1,7 @@
 package com.jparrack.catchat.data;
 
+import android.util.Log;
+
 import com.jparrack.catchat.listeners.DataCallback;
 import com.jparrack.catchat.models.Chat;
 import com.jparrack.catchat.models.ChatItem;
@@ -14,8 +16,9 @@ import java.util.List;
  */
 
 public class TestDataProvider implements DataProvider {
-
+    private static final String TAG = TestDataProvider.class.getName();
     private Chat createConversation(int mode) {
+        Log.d(TAG, "createConversation: ");
         Chat conversation = new Chat();
         List<ChatItem> messages = new ArrayList<>();
 
@@ -53,6 +56,7 @@ public class TestDataProvider implements DataProvider {
     }
 
     private Story createStory(int mode) {
+        Log.d(TAG, "createStory: ");
         Story conversation = new Story();
         List<StoryItem> messages = new ArrayList<>();
 

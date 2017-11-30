@@ -487,7 +487,8 @@ public class Camera2BasicFragment extends Fragment implements FragmentCompat.OnR
         if (FragmentCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
             new ConfirmationDialog().show(getChildFragmentManager(), FRAGMENT_DIALOG);
         } else {
-            FragmentCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+            FragmentCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE},
                     REQUEST_CAMERA_PERMISSION);
         }
     }
@@ -496,7 +497,8 @@ public class Camera2BasicFragment extends Fragment implements FragmentCompat.OnR
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
-            if (grantResults.length != 1 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "onRequestPermissionsResult: " + grantResults.length);
+            if (grantResults.length != 3 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                 ErrorDialog.newInstance("Error")
                         .show(getChildFragmentManager(), FRAGMENT_DIALOG);
             }
