@@ -1,7 +1,8 @@
 package com.jparrack.catchat.util;
 
 /**
- * Created by phanthuhao on 11/29/17.
+ * Created by jparrack on 11/29/17.
+ *
  */
 
 public class ObjectImage {
