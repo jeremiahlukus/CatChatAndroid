@@ -38,6 +38,7 @@ public class LoginFragment extends Fragment {
     private static final int REQUEST_SIGNUP = 0;
 
     public static String EMAIL = "";
+    public static String URL_IMAGE = "";
 
     @BindView(R.id.input_email)
     EditText _emailText;

@@ -11,7 +11,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.jparrack.catchat.ui.login.LoginFragment.EMAIL;
+import static com.jparrack.catchat.ui.login.LoginFragment.URL_IMAGE;
 
 /**
  * Created by phanthuhao on 11/29/17.
@@ -21,9 +25,11 @@ public class FirebaseListenDownloadImage {
     private static final String TAG = FirebaseListenDownloadImage.class.getName();
     public static FirebaseListenDownloadImage firebaseListenDownloadImage;
     private static OnListenImage onListenImage;
+    private static List<ObjectImage> listImage;
     public FirebaseListenDownloadImage(OnListenImage OnListenImage){
         if(firebaseListenDownloadImage == null){
             onListenImage = OnListenImage;
+            listImage = new ArrayList<>();
             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("image");
 
             mDatabase.addChildEventListener(new ChildEventListener() {
@@ -33,8 +39,13 @@ public class FirebaseListenDownloadImage {
                     Log.d(TAG,"Another User upload a image: " + dataSnapshot.getValue());
                     ObjectImage objectImage = dataSnapshot.getValue(ObjectImage.class);
                     Log.d(TAG, "onChildAdded: url: " + objectImage.getUrl());
+                    listImage.add(objectImage);
+
                     if(!objectImage.getEmail().equals(EMAIL)) {
                         onListenImage.listenImage(objectImage.getEmail(), objectImage.getUrl());
+                    }
+                    else{
+                        URL_IMAGE = objectImage.getUrl();
                     }
 
                 }
@@ -62,6 +73,15 @@ public class FirebaseListenDownloadImage {
 
             firebaseListenDownloadImage = this;
         }
+    }
+
+    public static String getUrlImageFromEmail(String email){
+        for(ObjectImage objectImage: listImage){
+            if(objectImage.getEmail().equals(email)){
+                return objectImage.getUrl();
+            }
+        }
+        return null;
     }
 
     public interface OnListenImage{

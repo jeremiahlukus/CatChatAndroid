@@ -25,9 +25,10 @@ import com.jparrack.catchat.view.SnapTabsView;
 import com.jparrack.catchat.view.StoryViewer;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class MainActivity extends FullScreenActivity implements FirebaseListenDownloadImage.OnListenImage,
-        FirebaseListenMessage.OnListenMessage{
+public class MainActivity extends FullScreenActivity implements FirebaseListenDownloadImage.OnListenImage{
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -49,6 +50,10 @@ public class MainActivity extends FullScreenActivity implements FirebaseListenDo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //listen event download Image from firebase
+        new FirebaseListenDownloadImage(this);
+
         LIGHT_BLUE = ContextCompat.getColor(this, R.color.light_blue);
         LIGHT_PURPLE = ContextCompat.getColor(this, R.color.light_purple);
         mRoot = (RelativeLayout) findViewById(R.id.am_root);
@@ -126,14 +131,23 @@ public class MainActivity extends FullScreenActivity implements FirebaseListenDo
             }
         });
 
-        //listen event download Image from firebase
-        new FirebaseListenDownloadImage(this);
+        /*Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                //Test send a message
+                FirebaseSendMessage.sendMessage("new@hey.com","Message Testing 1");
+                FirebaseSendMessage.sendMessage("new@hey.com","Message Testing 2");
+                FirebaseSendMessage.sendMessage("new@hey.com","Message Testing 3");
+                FirebaseSendMessage.sendMessage("passheyhey@hey.com","Message Testing 4");
+                FirebaseSendMessage.sendMessage("passheyhey@hey.com","Message Testing 5");
+                FirebaseSendMessage.sendMessage("nchalkley2@student.gsu.edu","Message Testing 5");
+                FirebaseSendMessage.sendMessage("nchalkley2@student.gsu.edu","Message Testing 6");
+                FirebaseSendMessage.sendMessage("supernew@new.com","Message Testing 7");
+                FirebaseSendMessage.sendMessage("supernew@new.com","Message Testing 8");
+            }
+        },3000);*/
 
-        //listen event message
-        new FirebaseListenMessage(this);
-
-        //Test send a message
-        FirebaseSendMessage.sendMessage("","Message Testing");
     }
 
     public void showStory(final IStory story, final Point point, final StoryViewer.StoryViewListener listener) {
@@ -224,14 +238,4 @@ public class MainActivity extends FullScreenActivity implements FirebaseListenDo
         });
     }
 
-    @Override
-    public void listenMessage(final String emailSend, final String message) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getApplicationContext(),"Receive new Message from " + emailSend + ": "+ message,
-                        Toast.LENGTH_LONG).show();
-            }
-        });
-    }
 }

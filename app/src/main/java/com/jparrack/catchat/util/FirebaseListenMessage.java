@@ -21,7 +21,7 @@ public class FirebaseListenMessage {
     private static String TAG = FirebaseListenMessage.class.getName();
     private static FirebaseListenMessage firebaseListenMessage;
     private static OnListenMessage onListenMessage;
-    private static List<ObjectMessage> listMessage;
+    public static List<ObjectMessage> listMessage;
     public FirebaseListenMessage(OnListenMessage OnListenMessage){
         if(firebaseListenMessage == null){
             listMessage = new ArrayList<>();

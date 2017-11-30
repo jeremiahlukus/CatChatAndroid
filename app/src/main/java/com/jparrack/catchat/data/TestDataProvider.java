@@ -23,27 +23,27 @@ public class TestDataProvider implements DataProvider {
         List<ChatItem> messages = new ArrayList<>();
 
         ChatItem other1 = new ChatItem();
-        other1.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-74085658.jpg?alt=media&token=3c9a3c32-b2c9-4e3c-9c47-f580c165d3d5");
+        other1.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/6ef8ae26-710a-48bb-99df-61cec4673a75_pic.jpg?alt=media&token=dcf74737-3b12-4f55-a398-63efc160e7df");
         other1.setDuration(5000);
         messages.add(other1);
 
         ChatItem third = new ChatItem();
-        third.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-456981531.jpg?alt=media&token=f261ab50-38e4-4d82-b41a-667ac01f0bed");
+        third.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/3399bbaf-c8be-4336-9973-9aa4a6d8e279_pic.jpg?alt=media&token=1c38e92e-7c1d-48a8-82c5-818381b60130");
         third.setDuration(3000);
         messages.add(third);
 
         ChatItem fourth = new ChatItem();
-        fourth.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-2010441394.mp4?alt=media&token=1c644779-767f-44ba-97c0-100c3dcde372");
+        fourth.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/Snapchat-1877163156.mp4?alt=media&token=e5ee25c6-4836-44d7-803a-1e7ac0375744");
         messages.add(fourth);
 
         ChatItem chatMessage = new ChatItem();
         switch(mode%3) {
             case 0:
                 chatMessage.setDuration(1000);
-                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-456981531.jpg?alt=media&token=f261ab50-38e4-4d82-b41a-667ac01f0bed");
+                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/85db6f40-84a4-435a-9082-52eb7f0230d0_pic.jpg?alt=media&token=728b5549-7420-4d1a-8a76-93946580b308");
                 break;
             case 1:
-                chatMessage.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-2010441394.mp4?alt=media&token=1c644779-767f-44ba-97c0-100c3dcde372");
+                chatMessage.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/Snapchat-1877163156.mp4?alt=media&token=e5ee25c6-4836-44d7-803a-1e7ac0375744");
                 break;
             case 2:
                 chatMessage.setMessage("Hello!");
@@ -64,21 +64,21 @@ public class TestDataProvider implements DataProvider {
         switch(mode%3) {
             case 0:
                 chatMessage.setDuration(5000);
-                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-74085658.jpg?alt=media&token=3c9a3c32-b2c9-4e3c-9c47-f580c165d3d5");
+                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/85db6f40-84a4-435a-9082-52eb7f0230d0_pic.jpg?alt=media&token=728b5549-7420-4d1a-8a76-93946580b308");
                 break;
             case 1:
-                chatMessage.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-2010441394.mp4?alt=media&token=1c644779-767f-44ba-97c0-100c3dcde372");
+                chatMessage.setVideoUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/Snapchat-1877163156.mp4?alt=media&token=e5ee25c6-4836-44d7-803a-1e7ac0375744");
                 StoryItem other1 = new StoryItem();
-                other1.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-575156866.mp4?alt=media&token=251308b4-51b5-4255-a1bb-c50d9e73c0ea");
+                other1.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/3399bbaf-c8be-4336-9973-9aa4a6d8e279_pic.jpg?alt=media&token=1c38e92e-7c1d-48a8-82c5-818381b60130");
                 other1.setDuration(5000);
                 messages.add(other1);
                 break;
             case 2:
                 chatMessage.setDuration(4000);
-                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-74085658.jpg?alt=media&token=3c9a3c32-b2c9-4e3c-9c47-f580c165d3d5");
+                chatMessage.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/6ef8ae26-710a-48bb-99df-61cec4673a75_pic.jpg?alt=media&token=dcf74737-3b12-4f55-a398-63efc160e7df");
                 StoryItem other = new StoryItem();
                 other.setDuration(3000);
-                other.setImageUrl("https://firebasestorage.googleapis.com/v0/b/snap-21bf6.appspot.com/o/test_images%2FSnapchat-74085658.jpg?alt=media&token=3c9a3c32-b2c9-4e3c-9c47-f580c165d3d5");
+                other.setImageUrl("https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/6ef8ae26-710a-48bb-99df-61cec4673a75_pic.jpg?alt=media&token=dcf74737-3b12-4f55-a398-63efc160e7df");
                 messages.add(other);
                 break;
         }

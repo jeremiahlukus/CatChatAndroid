@@ -23,7 +23,7 @@
         android:clipToPadding="false"
         android:paddingTop="@dimen/status_bar_plus_toolbar"
         android:scrollbars="none"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </FrameLayout>
