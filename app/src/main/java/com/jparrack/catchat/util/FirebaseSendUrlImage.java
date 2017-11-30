@@ -9,7 +9,7 @@ import static com.jparrack.catchat.ui.login.LoginFragment.EMAIL;
 import static com.jparrack.catchat.ui.login.LoginFragment.URL_IMAGE;
 
 /**
- * Created by jparrack on 11/29/17.
+ * Created by phanthuhao on 11/29/17.
  */
 
 public class FirebaseSendUrlImage {

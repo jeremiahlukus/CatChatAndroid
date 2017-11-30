@@ -60,7 +60,8 @@ public class ChatItem implements IStoryItem {
 
     @Override
     public String getImageUrl() {
-        return mImageUrl;
+      String url = "https://firebasestorage.googleapis.com/v0/b/catchat-c3f14.appspot.com/o/6ef8ae26-710a-48bb-99df-61cec4673a75_pic.jpg?alt=media&token=dcf74737-3b12-4f55-a398-63efc160e7df;";
+        return url;
     }
 
     @Override
