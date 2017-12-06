@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Created by jparrack on 3/4/17
+ * Created by jparrack on 9/9/17
  */
 
 public class Story implements IStory {

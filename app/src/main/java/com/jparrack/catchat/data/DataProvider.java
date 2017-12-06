@@ -7,7 +7,7 @@ import com.jparrack.catchat.models.Story;
 import java.util.List;
 
 /**
- * Created by jparrack on 3/4/17
+ * Created by jparrack on 9/4/17
  */
 
 public interface DataProvider {

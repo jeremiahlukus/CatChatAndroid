@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by jparrack on 3/4/17
+ * Created by jparrack on 10/4/17
  */
 
 public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdapter.ConversationViewHolder> implements OnClickAtIndex<Point> {

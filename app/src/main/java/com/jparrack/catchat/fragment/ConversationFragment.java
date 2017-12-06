@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.jparrack.catchat.R;
 
 /**
- * Created by jparrack on 3/4/17
+ * Created by jparrack on 10/4/17
  */
 
 public class ConversationFragment extends BaseFragment {

@@ -1,8 +1,5 @@
 package com.jparrack.catchat.util;
 
-/**
- * Created by phanthuhao on 11/30/17.
- */
 
 public class ObjectMessage {
     private String emailSend;

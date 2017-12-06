@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 
 /**
- * Created by jparrack on 3/3/17
+ * Created by jparrack on 9/3/17
  */
 
 public class FullScreenActivity extends BaseActivity {

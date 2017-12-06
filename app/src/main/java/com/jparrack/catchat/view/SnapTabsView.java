@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import com.jparrack.catchat.R;
 
 /**
- * Created by jparrack on 3/19/17
+ * Created by jparrack on 10/19/17
  */
 
 public class SnapTabsView extends FrameLayout implements ViewPager.OnPageChangeListener {

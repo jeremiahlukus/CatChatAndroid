@@ -17,9 +17,6 @@ import java.util.List;
 import static com.jparrack.catchat.ui.login.LoginFragment.EMAIL;
 import static com.jparrack.catchat.ui.login.LoginFragment.URL_IMAGE;
 
-/**
- * Created by phanthuhao on 11/29/17.
- */
 
 public class FirebaseListenDownloadImage {
     private static final String TAG = FirebaseListenDownloadImage.class.getName();

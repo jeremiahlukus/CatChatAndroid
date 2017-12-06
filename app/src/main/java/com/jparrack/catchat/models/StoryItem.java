@@ -3,7 +3,7 @@ package com.jparrack.catchat.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by jparrack on 3/4/17
+ * Created by jparrack on 10/4/17
  */
 
 public class StoryItem implements IStoryItem {

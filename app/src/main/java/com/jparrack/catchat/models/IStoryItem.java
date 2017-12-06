@@ -1,7 +1,7 @@
 package com.jparrack.catchat.models;
 
 /**
- * Created by jparrack on 3/6/17
+ * Created by jparrack on 9/20/17
  */
 
 public interface IStoryItem {

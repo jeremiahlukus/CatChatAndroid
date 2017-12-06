@@ -23,7 +23,7 @@ import java.util.List;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 /**
- * Created by jparrack on 3/6/17
+ * Created by jparrack on 10/6/17
  */
 
 public class StoriesAdapter extends RecyclerView.Adapter implements OnClickAtIndex<Point> {

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 
 /**
- * Created by jparrack on 3/5/17
+ * Created by jparrack on 9/5/17
  */
 
 public class BaseActivity extends AppCompatActivity {

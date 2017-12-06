@@ -9,7 +9,7 @@ import com.jparrack.catchat.fragment.EmptyFragment;
 import com.jparrack.catchat.fragment.StoriesFragment;
 
 /**
- * Created by jparrack on 3/3/17
+ * Created by jparrack on 10/3/17
  */
 
 public class MainViewAdapter extends FragmentStatePagerAdapter {

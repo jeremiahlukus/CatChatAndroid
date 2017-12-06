@@ -31,7 +31,7 @@ import java.util.Map;
 import static com.jparrack.catchat.ui.login.LoginFragment.EMAIL;
 
 /**
- * Created by jparrack on 3/3/17
+ * Created by jparrack on 10/3/17
  */
 
 public class ChatFragment extends BaseFragment implements FirebaseListenMessage.OnListenMessage {

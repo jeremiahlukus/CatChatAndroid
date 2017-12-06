@@ -3,7 +3,7 @@ package com.jparrack.catchat.models;
 import java.util.List;
 
 /**
- * Created by jparrack on 3/6/17
+ * Created by jparrack on 9/6/17
  */
 
 public interface IStory {

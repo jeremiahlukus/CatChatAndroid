@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import com.jparrack.catchat.util.Print;
 
 /**
- * Created by jparrack on 3/5/17
+ * Created by jparrack on 10/5/17
  */
 
 public class SurfaceVideoHelper implements TextureView.SurfaceTextureListener, MediaPlayer.OnPreparedListener,
